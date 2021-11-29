@@ -1,0 +1,65 @@
+@import "../../../styles/grid";
+.grid {
+  @include grid-template-column(2, var(--middle-space));
+}
+.container-grid{
+  margin-top: 36px;
+  h4{
+    padding-bottom: var(--size-space) !important;
+    letter-spacing: var(--letter-spacing-secondary);
+  }
+  margin-bottom: 60px;
+}
+.content {
+  h5 {
+    font-size: var(--fs-normal);
+    font-weight: var(--weight-700);
+    padding-bottom: var(--xs-size);
+    text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
+
+  }
+  p {
+    line-height: 28px;
+    padding-bottom: var(--middle-space);
+    &:last-child {
+      padding-bottom: 0;
+    }
+    letter-spacing: 1px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .content {
+    h5 {
+      font-size: var(--fs-small);
+    }
+    p {
+      font-size: var(--fs-small);
+      line-height: 20px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+    .grid{
+        @include grid-template-column(1, var(--sm-size));
+    }
+    .content{
+        p{
+            padding-bottom: var(--pd-12);
+        }
+    }
+    .container-grid{
+        margin-top: 0 !important;
+        margin-bottom: var(--size-space) !important;
+        h4{
+            padding-bottom: var(--pd-12) !important;
+            text-align: start !important;
+            font-size: var(--fs-large) !important;
+            font-weight: var(--weight-700);
+            letter-spacing: var(--letter-spacing) !important;
+            padding-top: 36px;
+        }
+    }
+}

@@ -1,0 +1,15 @@
+.circle{
+    color: var(--white);
+    font-size: 24px;
+    font-weight: bold;
+    width: 64px;
+    height: 64px;
+}
+
+@media screen and (max-width: 768px) {
+    .circle{
+        width: 48px;
+        height: 48px;
+        font-size: var(--fs-nlarge);
+    }
+}

@@ -1,0 +1,23 @@
+.button{
+    padding: 16px 24px;
+    color: var(--black);
+    background: var(--white);
+    border: 2px solid var(--button-primary);
+    border-radius: 2px !important;
+    letter-spacing: var(--letter-spacing-normal);
+    transition: all .35s cubic-bezier(0.23, 1, 0.320, 1);
+    &:hover{
+        background: var(--orange-primary);
+        color: var(--white);
+        border-color: var(--orange-primary);
+        box-shadow: var(--shadow-primary);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .button{
+        padding: 8px 12px;
+        font-size: var(--fs-xs) !important;
+        letter-spacing: var(--letter-spacing);
+    }
+}

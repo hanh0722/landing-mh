@@ -1,0 +1,46 @@
+@import '../theme/fixing';
+.right{
+    right: 0;
+    left: auto;
+}
+.line{
+    margin-top: 0 !important;
+    margin-bottom: 0;
+}
+
+.introduction{
+    padding: var(--middle-space);
+    padding-bottom: var(--middle-space);
+    text-align: justify;
+    word-break: break-word;
+}
+
+.reverse{
+    left: auto;
+    right: 0;
+}
+.box{
+    .top{
+        margin-top: 120px;
+        margin-bottom: 120px;
+        h4{
+            font-size: 24px !important;
+            padding-bottom: 32px !important;
+            line-height: 36px;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .box{
+        .top{
+            margin-top: var(--pd-64);
+            margin-bottom: var(--pd-64);
+            h4{
+                font-size: var(--fs-large);
+                letter-spacing: var(--letter-spacing-normal);
+                padding-bottom: var(--middle-space) !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,25 @@
+.container{
+    grid-column: 2/-1;
+    h5{
+        font-weight: var(--weight-700);
+        font-size: var(--fs-large);
+        line-height: var(--size-space);
+        letter-spacing: var(--letter-spacing);
+        text-transform: uppercase;
+        padding-bottom: var(--middle-space);
+    }
+}
+.grid{
+    grid-template-columns: repeat(auto-fill, minmax(297px, 1fr));
+}
+
+@media screen and (max-width: 768px) {
+    .grid{
+        & > div{
+            &:last-child{
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

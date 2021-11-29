@@ -1,0 +1,109 @@
+.container {
+  position: relative;
+  overflow: hidden;
+  img {
+    transition: all 0.5s ease-in-out;
+  }
+  h5 {
+    font-weight: var(--weight-700);
+    letter-spacing: var(--letter-spacing-normal);
+  }
+  &:hover {
+    box-shadow: var(--shadow-primary);
+    .content {
+      opacity: 1;
+    }
+    img {
+      transform: scale(1.1);
+    }
+  }
+  .intro{
+    line-height: var(--line-height-primary);
+    letter-spacing: var(--letter-spacing);
+  }
+}
+.content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  .text {
+    padding: var(--size-space);
+    color: var(--white);
+  }
+  line-height: var(--size-space);
+  background: rgba(var(--orange-primary-rgb), 0.8);
+  h5 {
+    font-size: var(--fs-large);
+    padding-bottom: var(--size-space);
+    text-transform: uppercase;
+    color: var(--white);
+    transition: all 0.35s ease-in-out;
+    line-height: 28px;
+  }
+  p {
+    &:first-child {
+      font-size: var(--fs-small);
+      letter-spacing: 1px;
+    }
+  }
+  a {
+    width: var(--size-space);
+    height: var(--size-space);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: var(--middle-space);
+    &:last-child {
+      margin-right: 0;
+    }
+    background: var(--white);
+    border-radius: 50%;
+    img {
+      width: 10px;
+      height: 19px;
+    }
+  }
+  .social {
+    padding-top: var(--size-space);
+  }
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  & > div,
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .container{
+    .text{
+      padding: var(--middle-space);
+    }
+    p{
+     &:first-child{
+       font-size: var(--fs-xs);
+       line-height: 20px;
+     } 
+    }
+    .intro{
+      line-height: 20px;
+      font-size: var(--fs-small);
+    }
+    h5{
+      padding-bottom: var(--middle-space);
+      font-size: var(--fs-nlarge);
+    }
+    .social{
+      padding-top: var(--middle-space);
+    }
+  }
+}

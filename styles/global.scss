@@ -1,0 +1,209 @@
+@font-face {
+  font-family: "Nunito Sans";
+  src: url("/Nunito_Sans/NunitoSans-Regular.ttf");
+}
+@import './transition.scss';
+@import './grid.scss';
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+}
+body, html{
+  overflow-x: hidden;
+}
+:root {
+  --orange-primary: #ff4b14;
+  --orange-primary-rgb: 255, 75, 20;
+  --background-primary: linear-gradient(
+    96.61deg,
+    #ff4e16 2.13%,
+    #fb6535 96.62%
+  );
+  --black: #000000;
+  --orange-secondary: #ff4e16;
+  --black-primary: #1d1d1d;
+  --white: #fff;
+  --fs-xsm: 10px;
+  --fs-xs: 12px;
+  --fs-small: 14px;
+  --fs-normal: 16px;
+  --fs-nlarge: 18px;
+  --fs-large: 20px;
+  --fs-xxl: 24px;
+  --middle-space: 24px;
+  --title-heading: 24px;
+  --size-space: 32px;
+  --pd-12: 12px;
+  --pd-14: 14px;
+  --pd-17: 17px;
+  --pd-18: 18px;
+  --pd-36: 36px;
+  --pd-20: 20px;
+  --pd-64: 64px;
+  --pd-48: 48px;
+  --pd-52: 52px;
+  --pd-96: 96px;
+  --letter-spacing-secondary: 1.5px;
+  --letter-spacing-normal: 1px;
+  --line-height-primary: 28px;
+  --shadow-primary: 0px 8px 40px rgba(255, 78, 22, 0.2);
+  --shadow-dark: 0px 2px 8px rgba(0, 0, 0, 0.16);
+  --shadow-button-primary: 0px 8px 40px rgba(91, 91, 91, 0.2);
+  --orange-light-primary: rgba(255, 78, 22, 0.05);
+  --border-color: #888888;
+  --border-mobile: #C5C5C5;
+  --light-orange: #ffede8;
+  --less-dark-orange: #fd7d55;
+  --lighest-orange: #FFF4F0;
+  --darker-orange: #ff6432;
+  --light-gray: #f7f7f7;
+  --blue-primary: #1673FF;
+  --sm-size: 12px;
+  --xs-size: 8px;
+  --md-size: 21px;
+  --mds-size: 18px;
+  --share-pd: 40px 0 76px 0;
+  --xxl-size: 64px;
+  --space: 120px;
+  --light-black: #45403e;
+  --button-primary: #45403e;
+  --darker-gray: #EDEDED;
+  --overlay: 0, 0, 0, 0.45;
+  --box-shadow: 0px 20px 100px rgba(91, 91, 91, 0.2);
+  --light-shadow: 0px 20px 40px rgba(48, 151, 245, 0.2);
+  --shadow-list: 0px 16px 24px rgba(91, 91, 91, .15);
+  --radius: 10px;
+  --md-radius: 15px;
+  --dark-gray: #fafafa;
+  --orange-primary-light: #faf7f7;
+  --weight-400: 400;
+  --weight-600: 600;
+  --weight-700: 700;
+  --weight-800: 800;
+  --weight-900: 900;
+  --weight-1000: 1000;
+  --weight-bold: bold;
+  --border-black: #888888;
+  --light-orange-primary: #FF602D;
+  --letter-spacing: .5px;
+  --gray-lighter: #c5c5c5;
+  --pagination-space: 48px;
+  --w-36: 36px;
+  --mg-16: 16px;
+  --input-space: 26px 24px 26px 50px;
+  --mg-26: 26px;
+  --mg-35: 35px;
+  --light-black-bg: rgba(255, 255, 255, 0.1);
+  --small-box-recruit: 4px 8px;
+  --overlay-banner: linear-gradient(180deg, rgba(29, 29, 29, 0) 48.98%, rgba(29, 29, 29, 0.72) 100%);
+  --gray-secondary: #888888;
+  --overlay-model: rgba(72, 72, 72, 0.5);
+  --orange-danger: #ff7145;
+}
+body[data-model='flow']{
+  overflow: hidden;
+}
+.container{
+  padding-left: 0;
+  padding-right: 0;
+}
+a {
+  text-decoration: none;
+  color: var(--black) !important;
+}
+p,
+ul,
+h5,
+ol {
+  margin-bottom: 0;
+}
+h1, h2, h3, h4, h5, h6{
+  color: var(--black-primary);
+}
+input[type='number']{
+  &::-webkit-inner-spin-button, &::-webkit-outer-spin-button{
+    -webkit-appearance: none;
+  } 
+}
+.swiper-pagination {
+  bottom: 0 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.swiper-pagination-bullet {
+  transition: all 0.15s ease-in-out;
+  // lack of ideas!
+}
+.swiper-pagination-bullet-active {
+  width: 16px !important;
+  height: 16px !important;
+  background: transparent !important;
+  border: 2px solid var(--orange-primary);
+}
+.error__text{
+  color: red;
+  font-size: 14px;
+}
+@mixin scale-start {
+  transform: scale(0);
+  opacity: 0;
+}
+@mixin scale-finish {
+  transform: scale(1);
+  opacity: 1;
+}
+
+.scale-enter{
+  @include scale-start();
+}
+.scale-enter-active{
+  @include scale-finish();
+  transition: all .75s ease;
+}
+.scale-exit{
+  @include scale-finish();
+}
+.scale-exit-active{
+  @include scale-start();
+  transition: all .75s ease;
+}
+@mixin form-open {
+  transform: translate(-50%, -100%);
+  opacity: 0
+}
+@mixin form-active {
+  transform: translate(-50%, -50%);
+  opacity: 1;
+}
+.form-open-enter{
+  @include form-open();
+}
+
+.form-open-enter-active{
+  @include form-active();
+  transition: all .75s ease-in-out;
+}
+.form-open-exit{
+  @include form-active();
+}
+.form-open-exit-active{
+  @include form-open();
+  transition: all .75s ease-in-out;
+}
+
+@media screen and (max-width: 1260px) {
+  .container{
+    padding-left: var(--middle-space);
+    padding-right: var(--middle-space);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  :root{
+    --share-pd: 18px 0 30px 0;
+  }
+}

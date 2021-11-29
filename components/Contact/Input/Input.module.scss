@@ -1,0 +1,20 @@
+.input{
+    input{
+        padding: 20px var(--middle-space);
+        width: 100%; 
+        color: var(--black-primary);
+        letter-spacing: var(--letter-spacing);
+        font-weight: var(--weight-400);
+        font-size: var(--fs-normal);
+    }
+    padding-bottom: 16px;
+    display: block;
+}
+
+@media screen and (max-width: 768px) {
+    .input{
+        input{
+            padding: var(--mg-16) var(--pd-12);
+        }
+    }
+}

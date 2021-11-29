@@ -1,0 +1,113 @@
+@import '../../../theme/fixing';
+.container{
+    background: var(--light-gray);
+    padding: 64px 0;
+    margin: 120px 0;
+    h5{
+        letter-spacing: var(--letter-spacing-normal);
+        line-height: var(--line-height-primary);
+    }
+}
+.contain{
+    margin-top: 0;
+    margin-bottom: 0;
+    @include title();
+}
+.button-left{
+    left: 15px;
+}
+.button-right{
+    right: 15px;
+}
+.button-left, .button-right{
+    top: 45%;
+    background: rgba(29, 29, 29, 0.6);
+    width: 48px;
+    height: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    svg{
+        width: 9px;
+        height: 18px;
+    }
+    svg,
+    path{
+        transition: all .35 ease;
+        stroke: var(--white);
+    }
+    &:hover{
+        path{
+            stroke: var(--orange-primary);
+        }
+    }
+}
+.grid{
+    grid-template-columns: repeat(1, 1fr);
+    gap: 23px;
+    h5{
+        font-size: 20px;
+        font-weight: var(--weight-700);
+        text-transform: uppercase;
+        color: var(--orange-primary);
+        line-height: var(--size-space);
+    }
+}
+.button{
+    margin-top: 24px;
+    font-size: 16px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    border-radius: 0;
+    font-weight: var(--weight-700);
+}
+.swiper{
+    padding-bottom: 50px;
+}
+
+@media screen and (max-width: 768px) {
+    .swiper{
+        padding-bottom: 50px;
+    }
+    .button{
+        margin-top: var(--pd-18);
+    }
+    .grid{
+        gap: 0;
+        h5{
+            padding-bottom: 11px;
+        }
+        & > div {
+            padding-bottom: 17px;
+            &:last-child{
+                padding-bottom: 0;
+            }
+        }
+    }
+    .container{
+        margin-top: 66px !important;
+        h4{
+            padding-bottom: var(--middle-space) !important;
+        }
+        padding-top: var(--size-space);
+        padding-bottom: var(--size-space);
+        margin-bottom: var(--pd-64) !important;
+
+    }
+    .contain{
+        padding-bottom: 0 !important;
+        margin: 0 !important;
+    }
+    .pagination{
+        margin-bottom: var(--middle-space);
+    }
+    .normal{
+        width: 6px !important;
+        height: 6px !important;
+    }
+    .active{
+        width: 10px !important;
+        height: 10px !important;
+    }
+}

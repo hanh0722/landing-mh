@@ -1,0 +1,24 @@
+@mixin bottom-fade-starter {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+@mixin bottom-fade-exit {
+    transform: translateX(0);
+    opacity: 1;
+}
+.bottom-fade-enter{
+    @include bottom-fade-starter();
+}
+.bottom-fade-enter-active{
+    @include bottom-fade-exit();
+    transition: all .5s ease-in-out;
+}
+
+.bottom-fade-exit{
+    @include bottom-fade-exit();
+}
+.bottom-fade-exit-active{
+    @include bottom-fade-starter();
+    transition: all .5s ease-in-out;
+}
+

@@ -1,0 +1,42 @@
+@mixin mg {
+    margin: 0 2px !important;
+}
+.container{
+    overflow: hidden;
+    padding-bottom: 48px;
+}
+.container-product{
+    & > h4{
+        line-height: 56px;
+        letter-spacing: var(--letter-spacing-secondary);
+    }
+}
+.normal{
+    width: 6px;
+    height: 6px;
+    @include mg();
+}
+.bullet{
+    width: 10px !important;
+    height: 10px !important;
+    @include mg();
+
+}
+.slide-swiper{
+    width: 272px !important;
+}
+
+@media screen and (max-width: 991px) {
+    .container{
+        padding-right: 0 !important;
+    }
+    .container-product{
+        padding-right: 0 !important;
+        & > h4{
+            line-height: 36px;
+        }
+    }
+}
+@media screen and (max-width: 768px) {
+    
+}

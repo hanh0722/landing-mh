@@ -1,0 +1,105 @@
+.category{
+    padding: var(--size-space);
+    background: var(--light-gray);
+    line-height: var(--middle-space);
+    h6{
+        font-size: var(--fs-normal);
+        text-transform: uppercase;
+        font-weight: bold;
+        letter-spacing: var(--letter-spacing);
+        color: var(--black-primary);
+        padding-bottom: var(--size-space);
+        margin: 0;
+    }
+    ul{
+        padding-left: 0;
+        list-style: none;
+        li{
+            margin-bottom: 14px;
+            padding-left: 16px;
+            cursor: pointer;
+            font-weight: var(--weight-600);
+            &:last-child{
+                margin-bottom: 0;
+            }
+            transition: all .3s ease;
+            &:hover{
+                color: var(--orange-primary);
+                &::before{
+                    background: var(--orange-primary);
+                }
+            }
+            position: relative;
+            letter-spacing: .5px;
+            &::before{
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                height: 100%;
+                width: 2px;
+                background: var(--black-primary);
+                transition: all .3s ease;
+            }
+        }
+        .active{
+            color: var(--orange-primary);
+            &::before{
+                background: var(--orange-primary);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .category{
+        padding: var(--size-space);
+        h6, li{
+            font-size: var(--fs-small);
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .category{
+        h6{
+            padding-bottom: var(--mg-16);
+            font-size: var(--fs-nlarge);
+        }
+        padding: 0;
+        background: transparent;
+        ul{
+            position: relative;
+            display: flex;
+            align-items: center;
+            li{
+                margin: 0;
+                &::before{
+                    display: none;
+                }
+                margin-left: var(--mg-16);
+                padding-left: 0;
+                &:first-child{
+                    margin-left: 0;
+                }
+            }
+            width: 431px;
+        }
+        .flow{
+            overflow-x: scroll;
+            overflow-y: hidden;
+            padding-bottom: var(--pd-20);
+            &::-webkit-scrollbar{
+                display: none;
+            }
+        }
+    }
+    .line{
+        width: 50px;
+        height: 2px;
+        background: var(--orange-primary);
+        position: absolute;
+        top: 100%;
+        transition: all .35s cubic-bezier(0.075, 0.82, 0.165, 1);
+    }
+}

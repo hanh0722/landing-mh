@@ -1,0 +1,52 @@
+@import '../../../../theme/fixing';
+.new{
+    line-height: var(--middle-space);
+    .image{
+        overflow: hidden;
+        img{
+            transition: all .35s ease;
+            &:hover{
+                transform: scale(1.1);
+            }
+        }
+    }
+    letter-spacing: var(--letter-spacing);
+    a{
+        @include show-n-line(2);
+        color: var(--black-primary);
+        font-size: var(--fs-normal);
+        text-transform: uppercase;
+        font-weight: bold;
+        transition: all .35s ease;
+        &:hover{
+            color: var(--orange-primary) !important;
+        }
+        letter-spacing: var(--letter-spacing);
+        line-height: var(--middle-space);
+    }
+    letter-spacing: var(--letter-spacing);
+    .time{
+        padding: var(--sm-size) 0 var(--xs-size) 0;
+        h6{
+            color: var(--orange-primary);
+            text-transform: uppercase;
+            margin: 0;
+            font-size: var(--sm-size);
+            cursor: pointer;
+        }
+        p{
+            font-size: var(--sm-size);
+            color: var(--border-color);
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .new{
+        .time{
+            padding-top: 8px;
+        }
+        border-bottom: 1px solid var(--border-color);
+        padding-bottom: var(--mg-16);
+    }
+}

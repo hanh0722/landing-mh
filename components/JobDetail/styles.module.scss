@@ -1,0 +1,118 @@
+.banner {
+  height: 216px !important;
+  background-attachment: unset !important;
+}
+.box {
+  margin-top: -120px;
+  h4{
+    letter-spacing: var(--letter-spacing-secondary);
+    padding-bottom: var(--mg-16) !important;
+    margin: 0;
+  }
+}
+.container{
+  margin-top: var(--xxl-size) !important;
+}
+.types {
+  div {
+    margin-right: var(--mg-16);
+    &:last-child {
+      margin-right: 0;
+    }
+    font-size: var(--fs-normal);
+  }
+}
+.left-side {
+  width: 65.5%;
+  line-height: var(--line-height-primary);
+}
+.grid {
+  h3 {
+    margin-bottom: 0;
+    padding-top: var(--size-space);
+    padding-bottom: var(--mg-16);
+    font-size: 24px;
+    font-weight: var(--weight-700);
+    line-height: 36px;
+    letter-spacing: calc(1px + var(--letter-spacing));
+    text-transform: uppercase;
+  }
+  .description {
+    h3 {
+      padding-top: 0;
+    }
+  }
+  border-bottom: 1px solid var(--gray-lighter);
+  padding-bottom: 48px;
+}
+.submit-btn {
+  border: none;
+  background: var(--orange-primary);
+  color: var(--white);
+  text-transform: uppercase;
+  margin-top: var(--size-space);
+}
+
+.share {
+  background: var(--light-gray);
+  h4 {
+    font-size: var(--fs-normal);
+    text-align: start !important;
+    padding-bottom: 30px !important;
+    font-weight: var(--weight-700);
+    letter-spacing: var(--letter-spacing);
+  }
+  margin-top: var(--size-space);
+  padding: var(--size-space);
+  font-weight: var(--weight-700);
+  .line {
+    span{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    span:last-child {
+      width: 36px;
+      height: 36px;
+      background: var(--orange-primary);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      margin-left: var(--middle-space);
+    }
+  }
+}
+.container-right {
+  width: 32%;
+}
+
+@media screen and (max-width: 991px) {
+  .grid{
+    flex-direction: column-reverse;
+    padding-bottom: var(--middle-space);
+  }
+  .left-side, .container-right{
+    width: 100%;
+  }
+  .submit-btn{
+    margin-top: var(--middle-space);
+  }
+  .left-side{
+    h1, h2, h3, h4, h5, h6{
+      padding-bottom: 4px !important;
+      padding-top: var(--middle-space) !important;
+      font-size: var(--fs-nlarge);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .box{
+    margin-top: -80px;
+    h4{
+      padding-bottom: var(--pd-12);
+      margin: 0;
+    }
+  }
+}

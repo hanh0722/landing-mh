@@ -1,0 +1,134 @@
+@import "../../../theme/fixing";
+.container {
+  @extend .container;
+  @include title();
+  h4 {
+    font-size: 24px;
+    padding: 0 !important;
+    letter-spacing: var(--letter-spacing-secondary);
+    line-height: 36px;
+  }
+  line-height: 26px;
+  h5 {
+    text-transform: uppercase;
+    font-size: var(--fs-normal);
+    color: var(--orange-primary);
+    line-height: var(--line-height-primary);
+    letter-spacing: var(--letter-spacing);
+  }
+  .intro {
+    padding: var(--fs-normal);
+    padding-top: var(--size-space);
+    max-width: 800px;
+    margin: 0 auto;
+    letter-spacing: var(--letter-spacing);
+  }
+  margin: 0 auto;
+}
+.container-bg {
+  background: var(--dark-gray);
+  padding: 64px 15px 78px 15px;
+  margin-bottom: var(--pd-64);
+}
+.big-circle {
+  max-width: 420px;
+  min-height: 420px;
+  margin: 65px auto 0 auto;
+  border: 1px solid var(--orange-primary);
+}
+.small-circle {
+  min-width: 150px;
+  min-height: 150px;
+  border: 9px solid var(--white);
+  background: var(--orange-primary-light);
+  &::before {
+    content: "";
+    position: absolute;
+    top: -20px;
+    bottom: -20px;
+    left: -20px;
+    right: -20px;
+    border-radius: 50%;
+    border: 1px solid var(--orange-primary);
+  }
+}
+.container-circle{
+    position: absolute;
+    width: calc(100% + 65px);
+    height: calc(100% + 65px);
+    border-radius: 50%;
+    .circle-element{
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0; 
+    }
+    .text{
+      z-index: 100;
+      font-size: var(--fs-normal);
+      font-weight: var(--weight-700);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      position: absolute;
+      top: calc(100% + 24px);
+    }
+}
+.image{
+  margin: 0 auto;
+  img{
+    width: 560px;
+    height: 527px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container-bg{
+    margin-top: 0;
+    margin-bottom: 0;
+    padding: var(--size-space);
+  }
+  .container{
+    padding: 0 !important;
+    h4{
+      font-size: var(--fs-large);
+      line-height: var(--line-height-primary);
+    }
+    
+    .intro{
+      padding: var(--pd-12) 0;
+      font-size: var(--fs-small);
+      letter-spacing: 0.5px;
+      max-width: 100%;
+      line-height: 20px;
+    }
+    h5{
+      font-size: var(--fs-small);
+      line-height: 20px;
+    }
+  }
+  .image{
+    img{
+      width: 327px;
+      height: 333px;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .big-circle{
+    max-width: 266px;
+    min-height: 266px;
+  }
+  .small-circle{
+    min-width: 84px;
+    min-height: 84px;
+    border: 3.4px solid var(--white) !important;
+    &::before{
+      top: -10px;
+      left: -10px;
+      right: -10px;
+      bottom: -10px;
+    }
+  }
+  
+}

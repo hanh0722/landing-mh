@@ -1,0 +1,32 @@
+@import '../../../theme/fixing';
+@import '../../../styles/grid';
+.news{
+    padding-top: var(--size-space);
+    h4{
+        text-align: start;
+        padding-bottom: var(--mg-16) !important;
+        font-size: 24px;
+        letter-spacing: var(--letter-spacing-secondary);
+        line-height: 36px;
+    }  
+    
+}
+.grid{
+    @include grid-template-column(3, var(--mg-16));
+}
+.route{
+    padding-top: 8px !important;
+}
+@media screen and (max-width: 991px) {
+    .grid{
+        @include grid-template-column(1, var(--mg-16));
+        & > div {
+            border-bottom: 1px solid var(--border-mobile);
+            padding-bottom: var(--mg-16);
+            &:last-child{
+                border-bottom: none;
+                padding-bottom: 0;
+            }
+        }
+    }
+}

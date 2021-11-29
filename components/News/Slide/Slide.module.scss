@@ -1,0 +1,107 @@
+.slide {
+  height: calc(100vh - 80px);
+  margin-top: 80px;
+  background: url("/new-banner.png");
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    background: linear-gradient(
+      180deg,
+      rgba(35, 32, 32, 0.05) 44.27%,
+      rgba(21, 19, 19, 0.9) 96.13%
+    );
+  }
+  position: relative;
+  color: var(--white);
+  .container {
+    position: absolute;
+    top: 45%;
+    z-index: 100 !important;
+    max-width: 800px;
+    text-transform: uppercase;
+    height: 100%;
+    left: 90px;
+    span {
+      letter-spacing: var(--letter-spacing);
+      padding: var(--xs-size) var(--sm-size);
+      background: rgba($color: #1d1d1d, $alpha: 0.75);
+    }
+    h2 {
+      font-size: 40px;
+      letter-spacing: var(--letter-spacing);
+      font-weight: var(--weight-700);
+      padding: 16px 0 var(--size-space) 0;
+      line-height: 56px;
+      margin-bottom: 0;
+      color: var(--white);
+    }
+  }
+  button {
+    text-transform: uppercase;
+    font-weight: bold;
+    border: none;
+  }
+}
+.text{
+  transition: all 1s ease-in-out;
+  position: absolute;
+  z-index: 100;
+  height: 100%;
+}
+
+@media screen and (max-width: 991px) {
+  .slide{
+    margin-top: 56px;
+    height: calc(100vh - 56px);
+    
+    .container{
+      max-width: 100%;
+      width: 100%;
+      left: 0;
+      padding: 0 var(--middle-space);
+      text-align: center;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      h2{
+        font-size: var(--fs-xxl);
+        padding-top: 4px;
+        padding-bottom: var(--mg-16);
+      }
+    }
+    button{
+      padding: var(--pd-12) var(--pd-20);
+      font-size: var(--fs-small) !important;
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slide{
+    height: 100%;
+    h2{
+      line-height: 36px !important;
+      font-size: var(--fs-large) !important;
+    }
+    button{
+      margin-bottom: 26px;
+    }
+    .container{
+      span{
+        font-size: var(--fs-xs);
+      }
+    }
+  }
+}

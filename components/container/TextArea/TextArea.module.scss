@@ -1,0 +1,8 @@
+.text-area{
+    border-radius: 2px !important;
+    border-color: var(--gray-lighter) !important;
+    transition: all .5s ease-in-out;
+    &:hover{
+        border-color: var(--border-color) !important;
+    }
+}

@@ -1,0 +1,105 @@
+.slide {
+  position: relative;
+  overflow: hidden;
+  max-width: 617px;
+  height: 414px;
+  img{
+    transition: all .5s ease-in-out;
+    z-index: 10 !important;
+    height: 414px;
+    object-fit: cover;
+    &:hover{
+      transform: scale(1.1);
+    }
+  }
+  &::before{
+    position: absolute;
+    bottom: 0;
+    height: 50%;
+    width: 100%;
+    content: '';
+    background: transparent;
+    transition: all .5s ease-in-out;
+    z-index: 5;
+    background: linear-gradient(180deg, rgba(35, 32, 32, 0) 45.7%, rgba(255, 78, 22, 0.71) 98.52%);
+  }
+  .content {
+    color: var(--white);
+    position: absolute;
+    bottom: 0;
+    padding: 32px;
+    z-index: 10;
+    span {
+      padding: var(--xs-size) var(--sm-size);
+      background: rgba(var(--overlay));
+      font-size: var(--fs-small);
+      margin-bottom: var(--sm-size);
+      display: inline-block;
+      letter-spacing: var(--letter-spacing);
+    }
+    a {
+      text-decoration: none;
+      color: var(--white) !important;
+      font-size: 32px;
+      font-weight: var(--weight-700);
+      letter-spacing: 1px;
+      line-height: 40px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* number of lines to show */
+      -webkit-box-orient: vertical;
+    }
+    p {
+      margin: 0;
+    }
+    text-transform: uppercase;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slide{
+    max-width: 100%;
+    max-height: 100%;
+    .content{
+      padding: var(--middle-space);
+      a{
+        font-size: 18px !important;
+        line-height: 28px !important;
+      }
+      span{
+        padding: 4px 8px;
+        margin-bottom: 4px;
+        font-size: var(--fs-xs);
+        letter-spacing: var(--letter-spacing);
+        line-height: 20px;
+      }
+    }
+  } 
+}
+
+@media screen and (max-width: 768px) {
+  .slide{
+    .content{
+      padding: var(--middle-space);
+      span{
+        padding: 4px 8px;
+        font-size: var(--fs-xs);
+        margin-bottom: 4px;
+      }
+      a{
+        font-size: var(--fs-nlarge);
+        line-height: var(--line-height-primary);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .slide{
+    height: 220px;
+    img{
+        height: 220px;
+    }
+  }
+}

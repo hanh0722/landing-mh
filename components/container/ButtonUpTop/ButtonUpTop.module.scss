@@ -1,0 +1,27 @@
+.button{
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    svg{
+        width: 14px;
+    }
+    background: var(--orange-primary);
+    path{
+        fill: var(--white);
+    }
+    cursor: pointer;
+    z-index: 1000;
+    transition: all .5s ease-in-out;
+    transform: translateY(-200%);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.button-back{
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: visible;
+}

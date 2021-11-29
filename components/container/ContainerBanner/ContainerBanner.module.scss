@@ -1,0 +1,28 @@
+.container {
+  height: calc(50vh - 80px) !important;
+  background: url("../../../public/banner.png");
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-position: center !important;
+  position: relative;
+  background-attachment: fixed !important;
+  margin-top: 80px;
+  z-index: 10;
+  &::before{
+    content: '';
+    z-index: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: var(--overlay-banner);
+    position: absolute;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .container{
+    margin-top: 56px;
+    height: calc(50vh - 56px) !important;
+  }
+}

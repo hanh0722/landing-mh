@@ -1,0 +1,24 @@
+.box{
+    line-height: var(--line-height-primary);
+    letter-spacing: var(--letter-spacing);
+    p{
+        font-weight: var(--weight-400);
+        color: var(--light-black);
+    }
+    padding-top: var(--size-space);
+    padding-bottom: var(--size-space);
+    border-bottom: 1px dashed var(--border-color);
+    h6{
+        text-transform: uppercase;
+        font-weight: var(--weight-700);
+        padding-top: 4px;
+        margin: 0;
+        font-size: var(--fs-normal);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .box{
+        padding: var(--mg-16) 0;
+    }
+}
