@@ -23,7 +23,8 @@
     "react-redux": "^7.2.6",
     "react-transition-group": "^4.4.2",
     "sass": "^1.43.3",
-    "swiper": "^6.8.4"
+    "swiper": "^6.8.4",
+    "yarn": "^1.22.17"
   },
   "devDependencies": {
     "eslint": "7.32.0",
